@@ -1,0 +1,77 @@
+html {
+  box-sizing: border-box;
+  font-family: $font-regular;
+}
+*:before,
+*:after {
+  box-sizing: inherit;
+  font-family: inherit;
+}
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: inherit;
+}
+a {
+  text-decoration: none;
+}
+a:active {
+  border: 2px solid $green;
+  background-color: white;
+  outline: none;
+}
+a,
+button {
+  cursor: pointer;
+}
+ul,
+li {
+  list-style: none;
+}
+.body {
+  font-size: $font-size-body;
+  line-height: $line-height-body;
+  letter-spacing: $letter-spacing-body;
+  color: $black;
+  padding: 0;
+  margin: 0;
+  &_not-scroll {
+    overflow: hidden;
+  }
+}
+.services {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.delimiter {
+  background: $delimiter-color;
+  border-radius: 1px;
+  width: 2px;
+  height: 32px;
+}
+.main {
+  background-color: $pale-grey;
+}
+.title {
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+  color: $black;
+}
+.services__nav {
+  margin-bottom: 24px;
+  @media all and (min-width: 768px) {
+    & {
+      margin-bottom: 32px;
+    }
+  }
+  @media all and (min-width: 1120px) {
+    & {
+      margin-bottom: 10px;
+    }
+  }
+}
+.hidden {
+  display: none !important;
+}

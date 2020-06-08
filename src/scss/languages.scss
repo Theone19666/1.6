@@ -1,0 +1,11 @@
+.languages {
+  &__link {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 7px;
+    }
+    &_active {
+      color: $grey;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.animated-link-text {
+  position: relative;
+  &::before {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: $green;
+    position: absolute;
+    bottom: -3px;
+    transition: width 1s;
+  }
+  &:hover::before {
+    width: 100%;
+  }
+}

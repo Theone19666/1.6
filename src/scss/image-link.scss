@@ -1,0 +1,47 @@
+.image-link {
+  width: 40px;
+  height: 40px;
+  background-color: $pink;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-position: center;
+  display: block;
+  transition: opacity $transition-duration;
+
+  &:hover {
+    opacity: $opacity;
+  }
+  &:focus {
+    border: 2px solid $green;
+    outline: none;
+  }
+  &:active {
+    border: 2px solid $green;
+    background-color: $pink;
+    outline: none;
+  }
+}
+.image-link_menu {
+  background-image: url(../img/navigation/menu.svg);
+}
+.image-link_phone {
+  background-image: url(../img/navigation/call.svg);
+}
+.image-link_chat {
+  background-image: url(../img/navigation/chat.svg);
+}
+.image-link_contacts {
+  background-image: url(../img/navigation/profile.svg);
+}
+.image-link_repair {
+  background-image: url(../img/navigation/repair.svg);
+}
+.image-link_checkstatus {
+  background-image: url(../img/navigation/checkstatus.svg);
+}
+.image-link__close {
+  background-image: url(../img/navigation/close.svg);
+}
+.image-link_search {
+  background-image: url(../img/navigation/search.svg);
+}

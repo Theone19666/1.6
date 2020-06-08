@@ -1,0 +1,28 @@
+.title-links {
+  display: none;
+  @media all and (min-width: 1120px) {
+    & {
+      display: block;
+    }
+  }
+  &__link {
+    background-color: transparent;
+    font-family: "TT Lakes";
+    font-weight: 500;
+    background-repeat: no-repeat;
+    background-position: 99% center;
+    height: 40px;
+    padding-right: 48px;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.3;
+    }
+    &-request {
+      background-image: url(../img/navigation/repair-circle.svg);
+      margin-right: 32px;
+    }
+    &-status {
+      background-image: url(../img/navigation/checkstatus-circle.svg);
+    }
+  }
+}

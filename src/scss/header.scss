@@ -1,0 +1,100 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 19px 16px;
+  background-color: white;
+
+  @media all and (min-width: 768px) {
+    & {
+      padding: 19px 24px;
+    }
+  }
+  @media all and (min-width: 1120px) {
+    & {
+      display: none;
+    }
+  }
+  &__link_logo {
+    margin-right: 16.73px;
+    border: $transparent-border;
+    @media all and (min-width: 768px) {
+      & {
+        margin: 0;
+      }
+    }
+  }
+  &__link_phone {
+    display: none;
+    @media all and (min-width: 768px) {
+      & {
+        display: block;
+        margin-right: 16px;
+      }
+    }
+  }
+  &__link_chat {
+    display: none;
+    @media all and (min-width: 768px) {
+      display: block;
+      margin-right: 16px;
+    }
+  }
+  &__link_contacts {
+    display: none;
+    @media all and (min-width: 768px) {
+      display: block;
+      margin-right: 20px;
+    }
+  }
+  &__link_repair {
+    margin-right: 16px;
+  }
+  &__logo-delimiter {
+    display: none;
+    @media all and (min-width: 768px) {
+      & {
+        display: block;
+        margin-right: 20px;
+      }
+    }
+  }
+  &__logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo-image {
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: $opacity;
+    }
+  }
+  &__menu-icon {
+    margin-right: 16.73px;
+    @media all and (min-width: 768px) {
+      & {
+        margin-right: 20px;
+      }
+    }
+  }
+  &__links-delimiter {
+    display: none;
+    @media all and (min-width: 768px) {
+      & {
+        display: block;
+        margin-right: 20px;
+      }
+    }
+  }
+  &__links-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @media all and (min-width: 768px) {
+    &__wrappers-delimiter {
+      display: none;
+    }
+  }
+}

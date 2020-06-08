@@ -1,0 +1,76 @@
+.brand {
+  padding: 16px;
+  border-radius: 6px;
+  background-color: white;
+  border: 1px solid $delimiter-color;
+  width: 240px;
+  height: 74px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  background-position: 20px center;
+  background-repeat: no-repeat;
+  transition: $opacity-transition;
+  @media all and (min-width: 768px) {
+    & {
+      width: 224px;
+    }
+  }
+  @media all and (min-width: 1120px) {
+    & {
+      width: 240px;
+    }
+  }
+  &:hover {
+    opacity: $opacity;
+  }
+  &:focus,
+  &:active {
+    border: 2px solid $border-green;
+    background-color: white;
+    outline: none;
+  }
+  &_lenovo {
+    background-image: url(../img/brands/lenovo.svg);
+  }
+  &_samsung {
+    background-image: url(../img/brands/samsung.svg);
+  }
+  &_apple {
+    background-image: url(../img/brands/apple.svg);
+  }
+  &_viewsonic {
+    background-image: url(../img/brands/ViewSonic.svg);
+  }
+  &_bosch {
+    background-image: url(../img/brands/bosch.svg);
+  }
+  &_hp {
+    background-image: url(../img/brands/hp.svg);
+  }
+  &_acer {
+    background-image: url(../img/brands/acer.svg);
+  }
+  &_sony {
+    background-image: url(../img/brands/sony.svg);
+  }
+  &__arrow {
+    border: 2px solid $pink;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      border-top: 2px solid $pink;
+      border-right: 2px solid $pink;
+      top: 50%;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      transform: translate(-60%, -50%) rotate(45deg);
+    }
+  }
+}

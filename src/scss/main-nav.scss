@@ -1,0 +1,82 @@
+.main-nav {
+  box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2),
+    -2px 0px 4px rgba(69, 79, 126, 0.02);
+  position: fixed;
+  width: 320px;
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+  height: 100vh;
+  background-color: white;
+  width: 100%;
+  z-index: 1;
+  @media all and (min-width: 768px) {
+    & {
+      width: 320px;
+    }
+  }
+  &_hidden {
+    display: none;
+  }
+  &__header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18.73px 24px 46px 24px;
+  }
+  &__logo-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &__close {
+    margin-right: 16.73px;
+  }
+  &__logo-link {
+    border: $transparent-border;
+    transition: $opacity-transition;
+    &:hover {
+      opacity: $opacity;
+    }
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 46px;
+  }
+  &__link {
+    height: 32px;
+    line-height: 32px;
+    padding-left: 24px;
+    display: block;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    &_active {
+      background-image: url(../img/general/highlight.svg);
+      background-position: center left;
+      background-repeat: no-repeat;
+      color: $grey;
+    }
+  }
+  &__contacts-links {
+    padding-left: 24px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 16px;
+  }
+
+  &__contacts-link_phone,
+  &__contacts-link_chat {
+    margin-right: 16px;
+  }
+  &__lang-links {
+    margin-top: 40px;
+    padding-left: 24px;
+  }
+  &__lang-link:hover {
+    color: #7e7e82;
+  }
+}

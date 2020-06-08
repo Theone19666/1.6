@@ -1,0 +1,6 @@
+.focused-text-link:focus,
+.focused-text-link:active {
+  border: 2px solid $border-green;
+  background-color: white;
+  outline: none;
+}

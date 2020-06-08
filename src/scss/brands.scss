@@ -1,0 +1,39 @@
+.brands {
+  padding: 16px 16px 66px 16px;
+  box-sizing: border-box;
+  @media all and (min-width: 768px) {
+    & {
+      height: 204px;
+      padding: 24px;
+      padding-right: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+  @media all and (min-width: 1120px) {
+    & {
+      padding: 24px 32px;
+      padding-right: 0;
+    }
+  }
+  &_show-all-brand {
+    height: initial !important;
+  }
+  &__brand {
+    margin-bottom: 16px;
+    &:not(:last-child) {
+      margin-right: 24px;
+      @media all and (min-width: 768px) {
+        & {
+          margin-right: 24px;
+        }
+      }
+      @media all and (min-width: 1120px) {
+        & {
+          margin-right: 32px;
+        }
+      }
+    }
+  }
+}

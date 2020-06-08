@@ -1,0 +1,21 @@
+.title-wrapper {
+  padding: 24px 16px;
+  background-image: url(../img/general/highlight.svg);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  @media all and (min-width: 768px) {
+    & {
+      padding: 24px 24px 32px 24px;
+      background-position: 0 42%;
+    }
+  }
+  @media all and (min-width: 1120px) {
+    & {
+      padding: 42px 32px 17px 32px;
+      background-position: 0 71%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
