@@ -1,3 +1,5 @@
+const moreButtonHideSelector = "more-button_hide";
+
 function toggleMainNavVisibility() {
   const mainNav = document.getElementById("mainNav");
   const body = document.querySelector(".body");
@@ -10,10 +12,39 @@ function toggleMainNavVisibility() {
   }
 }
 
+function toggleShowButtonAndBrands({ show = true, repairButton = {} } = {}) {
+  if (show) {
+    repairButton.textContent = "Показать всё";
+    repairButton.classList.remove(moreButtonHideSelector);
+    // document.querySelector(".brands").classList.remove("brands_show-all-brand");
+    repairButton.previousElementSibling
+      .querySelector(".repair-wrapper")
+      .classList.remove("wrapper-show-all");
+  } else {
+    repairButton.textContent = "Скрыть";
+    repairButton.classList.add(moreButtonHideSelector);
+    //document.querySelector(".brands").classList.add("brands_show-all-brand");
+    repairButton.previousElementSibling
+      .querySelector(".repair-wrapper")
+      .classList.add("wrapper-show-all");
+  }
+}
+
 document.getElementById("burgerButton").addEventListener("click", () => {
   toggleMainNavVisibility();
 });
 
 document.getElementById("close").addEventListener("click", () => {
   toggleMainNavVisibility();
+});
+
+document.querySelectorAll(".repair__more-button").forEach((item) => {
+  item.addEventListener("click", (event) => {
+    const repairButton = event.target.closest(".repair__more-button");
+    if (repairButton.classList.contains(moreButtonHideSelector)) {
+      toggleShowButtonAndBrands({ repairButton, show: true });
+    } else {
+      toggleShowButtonAndBrands({ repairButton, show: false });
+    }
+  });
 });

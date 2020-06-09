@@ -1,0 +1,18 @@
+.link-arrow {
+  border: 2px solid $pink;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    border-top: 2px solid $pink;
+    border-right: 2px solid $pink;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    transform: translate(-60%, -50%) rotate(45deg);
+  }
+}

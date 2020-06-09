@@ -1,0 +1,55 @@
+.repair-types {
+  padding: 16px 16px 52px 16px;
+  @media all and (min-width: 768px) {
+    & {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      overflow: hidden;
+      flex-wrap: wrap;
+      padding: 24px;
+      height: 184px;
+    }
+  }
+  @media all and (min-width: 1120x) {
+    & {
+      padding: 24px 32px;
+    }
+  }
+  /* width: 240px; */
+  &__type:not(:not(:last-child)) {
+    margin-right: 16px;
+    @media all and (min-width: 768px) {
+      & {
+        margin-right: initial;
+      }
+    }
+  }
+  &__type:not(:nth-child(3n)):not(:last-child) {
+    @media all and (min-width: 768px) {
+      & {
+        margin-right: 24px;
+      }
+    }
+    @media all and (min-width: 1120px) {
+      & {
+        margin-right: 0;
+      }
+    }
+  }
+  &__type:not(:nth-child(4n)):not(:last-child) {
+    @media all and (min-width: 1016px) {
+      & {
+        /*width: calc(25% - 32px);*/
+        margin-right: 24px;
+      }
+    }
+    @media all and (min-width: 1120px) {
+      & {
+        /*width: calc(25% - 32px);*/
+        margin-right: 32px;
+      }
+    }
+  }
+}

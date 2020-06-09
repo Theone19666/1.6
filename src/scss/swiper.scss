@@ -4,3 +4,10 @@
 .swiper-container-horizontal > .swiper-pagination-bullets {
   bottom: 38px;
 }
+.repair-types-swiper-container.swiper-container-horizontal
+  > .swiper-pagination-bullets {
+  bottom: 12px;
+}
+.swiper-wrapper {
+  box-sizing: border-box;
+}

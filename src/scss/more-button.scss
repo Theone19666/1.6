@@ -3,6 +3,7 @@
   padding-left: 26px;
   border: $transparent-border;
   position: relative;
+  font-family: inherit;
   &::after {
     content: url(../img/general/expand.svg);
     position: absolute;

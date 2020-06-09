@@ -1,0 +1,36 @@
+.repair-type {
+  /*width: 240px;*/
+  height: 160px;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 1px solid $repair-type-border;
+  border-radius: 6px;
+  padding: 16px;
+  box-sizing: border-box;
+
+  @media all and (min-width: 768px) {
+    & {
+      /*width: calc(25% - 24px);*/
+      width: 224px;
+      margin-bottom: 16px;
+    }
+  }
+  @media all and (min-width: 1120px) {
+    & {
+      width: 240px;
+    }
+  }
+  &:hover {
+    opacity: $opacity;
+  }
+  &__title {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-weight: 500;
+  }
+  &__arrow {
+    align-self: flex-end;
+  }
+}

@@ -1,4 +1,5 @@
 /*@import "~normalize.css"; - импорт из node-модулей */
+//@import "../../node_modules/swiper/swiper.scss";
 @import "./fonts.scss";
 @import "./variables.scss";
 @import "./general.scss";
@@ -20,3 +21,6 @@
 @import "./swiper.scss";
 @import "./repair.scss";
 @import "./more-button.scss";
+@import "./link-arrow.scss";
+@import "./repair-types.scss";
+@import "./repair-type.scss";
