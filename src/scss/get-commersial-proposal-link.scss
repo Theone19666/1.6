@@ -1,0 +1,32 @@
+.get-commersial-proposal-link {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  padding: 0 16px;
+  font-weight: 500;
+  position: relative;
+  display: block;
+  @media all and (min-width: 768px) {
+    & {
+      width: initial;
+      padding: 0 24px;
+    }
+  }
+  @media all and (min-width: 768px) {
+    & {
+      padding: 0 32px;
+    }
+  }
+
+  &::after {
+    content: "";
+    border-top: 2px solid $pink;
+    border-right: 2px solid $pink;
+    position: absolute;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    transform: translate(-60%, -50%) rotate(45deg);
+    right: 15px;
+  }
+}

@@ -1,0 +1,31 @@
+.prices-titles {
+  display: none;
+
+  @media all and (min-width: 768px) {
+    & {
+      display: flex;
+      justify-content: space-between;
+      padding: 31px 40px 16px;
+    }
+  }
+  @media all and (min-width: 1120px) {
+    & {
+      padding: 31px 56px 16px;
+    }
+  }
+  &::after {
+    content: "";
+    width: 119px;
+  }
+
+  .prices-titles__title {
+    font-size: 14px;
+    line-height: 16px;
+    color: $grey;
+    opacity: 0.72;
+    font-weight: 500;
+    &:first-of-type {
+      width: 43%;
+    }
+  }
+}
