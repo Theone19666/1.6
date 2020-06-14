@@ -42,10 +42,19 @@ li {
     overflow: hidden;
   }
 }
-.services {
+.body-wrapper {
   max-width: 1120px;
   margin: 0 auto;
+  @media all and (min-width: 1366px) {
+    & {
+      display: flex;
+      flex-direction: row;
+      margin: 0 auto;
+      max-width: 1440px;
+    }
+  }
 }
+
 .delimiter {
   background: $delimiter-color;
   border-radius: 1px;

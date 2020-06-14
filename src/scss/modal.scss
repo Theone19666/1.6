@@ -1,0 +1,72 @@
+.modal {
+  z-index: 9;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  height: 100vh;
+  overflow: auto;
+  top: 0;
+  @media all and (min-width: 768px) {
+    & {
+      background-color: rgba($color: white, $alpha: 0.96);
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+  &__wrapper {
+    width: 100%;
+    padding: 24px 16px 126px 16px;
+    position: relative;
+    background: {
+      image: url(../img/general/highlight.svg);
+      repeat: no-repeat;
+      position: 0 100px;
+      color: white;
+    }
+    @media all and (min-width: 768px) {
+      & {
+        width: 420px;
+        box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2),
+          -2px 0px 4px rgba(69, 79, 126, 0.02);
+        padding: 40px 32px;
+        background-position: 0 36px;
+      }
+    }
+  }
+  &__close {
+    margin-bottom: 40px;
+
+    @media all and (min-width: 768px) {
+      & {
+        position: absolute;
+        top: 32px;
+        left: -74px;
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__title {
+    line-height: 32px;
+    margin-bottom: 24px;
+  }
+  &__input {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  &__textarea {
+    margin-bottom: 16px;
+  }
+  &__text {
+    line-height: 16px;
+    color: $grey;
+    margin-bottom: 23px;
+  }
+  &__link {
+    color: $pink;
+  }
+  &__order-link {
+    position: absolute;
+    right: 16px;
+  }
+}

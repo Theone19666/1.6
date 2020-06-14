@@ -1,24 +1,41 @@
 .main-nav {
-  box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2),
-    -2px 0px 4px rgba(69, 79, 126, 0.02);
   position: fixed;
-  width: 320px;
-  padding-bottom: 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: auto;
   height: 100vh;
-  background-color: white;
+  background-color: rgba($color: white, $alpha: 0.96);
   width: 100%;
-  z-index: 1;
-  @media all and (min-width: 768px) {
+  z-index: 3;
+  @media all and (min-width: 1366px) {
     & {
+      position: static;
+      height: initial;
+      box-shadow: none;
       width: 320px;
     }
   }
   &_hidden {
     display: none;
+  }
+  &__wrapper {
+    overflow: auto;
+    background-color: white;
+    width: 100%;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    @media all and (min-width: 768px) {
+      & {
+        width: 320px;
+        box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2),
+          -2px 0px 4px rgba(69, 79, 126, 0.02);
+      }
+    }
+    @media all and (min-width: 1366px) {
+      & {
+        justify-content: start;
+      }
+    }
   }
   &__header-wrapper {
     display: flex;
@@ -44,6 +61,11 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 46px;
+    @media all and (min-width: 1366px) {
+      & {
+        margin-bottom: 240px;
+      }
+    }
   }
   &__link {
     height: 32px;

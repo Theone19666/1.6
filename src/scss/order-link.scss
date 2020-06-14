@@ -8,7 +8,11 @@
   display: block;
   padding: 4px 40px 4px 12px;
   border-radius: 16px;
-  font-weight: 600;
+  transition: $opacity-transition;
+  border: 1px solid $pink;
+  &:hover {
+    opacity: $opacity;
+  }
   &::after {
     content: "";
     border-top: 2px solid white;
@@ -19,5 +23,16 @@
     height: 8px;
     transform: translate(-60%, -50%) rotate(45deg);
     right: 16px;
+  }
+  &:focus,
+  &:active {
+    border: 1px solid $black;
+    border-radius: 16px;
+    outline: none;
+  }
+
+  &__text {
+    font-family: $font-regular;
+    font-weight: 500;
   }
 }

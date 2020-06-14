@@ -1,0 +1,31 @@
+textarea {
+  border: 1px solid $repair-type-border;
+  border-radius: 8px;
+  padding: 12px 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: $swiper-bullet-active;
+  width: 100%;
+  resize: none;
+  height: 118px;
+  margin-bottom: 16px;
+  font: {
+    family: $font-regular;
+    size: 16px;
+  }
+  &::-webkit-input-placeholder {
+    color: $swiper-bullet-active;
+  }
+  &::-moz-placeholder {
+    color: $swiper-bullet-active;
+  }
+  &:-ms-input-placeholder {
+    color: $swiper-bullet-active;
+  }
+  &::-ms-input-placeholder {
+    color: $swiper-bullet-active;
+  }
+  &::placeholder {
+    color: $swiper-bullet-active;
+  }
+}

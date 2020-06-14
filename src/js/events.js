@@ -48,3 +48,18 @@ document.querySelectorAll(".repair__more-button").forEach((item) => {
     }
   });
 });
+document.querySelectorAll(".modal__close").forEach((item) => {
+  item.addEventListener("click", (event) => {
+    event.target.closest(".modal").classList.add("hidden");
+  });
+});
+document.querySelectorAll(".image-link_chat").forEach((item) => {
+  item.addEventListener("click", () => {
+    document.getElementById("feedbackModal").classList.remove("hidden");
+  });
+});
+document.querySelectorAll(".image-link_phone").forEach((item) => {
+  item.addEventListener("click", () => {
+    document.getElementById("callbackModal").classList.remove("hidden");
+  });
+});
