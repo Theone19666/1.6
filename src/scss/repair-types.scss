@@ -12,7 +12,7 @@
       height: 184px;
     }
   }
-  @media all and (min-width: 1120x) {
+  @media all and (min-width: 1366x) {
     & {
       padding: 24px 32px;
     }
@@ -32,7 +32,7 @@
         margin-right: 24px;
       }
     }
-    @media all and (min-width: 1120px) {
+    @media all and (min-width: 1366px) {
       & {
         margin-right: 0;
       }
@@ -45,7 +45,7 @@
         margin-right: 24px;
       }
     }
-    @media all and (min-width: 1120px) {
+    @media all and (min-width: 1366px) {
       & {
         /*width: calc(25% - 32px);*/
         margin-right: 32px;

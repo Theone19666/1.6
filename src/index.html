@@ -108,7 +108,7 @@
               <div class="delimiter header__logo-delimiter"></div>
               <a href="#" class="header__link_logo focused-text-link">
                 <img
-                  src="./img/header/logo.svg"
+                  src="./img/navigation/logo.svg"
                   class="header__logo-image"
                   alt="логотип компании"
                 />
@@ -172,21 +172,26 @@
             </nav>
             <div class="description">
               <div class="description__text-wrapper">
-                <p class="description_text">
+                <p class="description__text">
                   Мы являемся авторизованным сервисным центром по ремонту
                   техники Dell. Только у нас вы можете отремонтировать свой
                   ноутбук Dell с официальной гарантией производителя
                 </p>
                 <br />
-                <p class="description_text">
+                <p class="description__text">
                   Мы успешно работаем с 1992 года и заслужили репутацию
                   надёжного партнёра, что подтверждает большое количество
                   постоянных клиентов. Мы гордимся тем, что к нам обращаются по
                   рекомендациям и, в свою очередь, советуют нас родным и
                   близким.
                 </p>
+                <br />
+                <p class="description__text hidden">
+                  Третий блок
+                </p>
                 <button
                   class="description__more more-button text-link focused-text-link"
+                  id="readMoreDescriptionButton"
                 >
                   Читать далее
                 </button>
@@ -419,63 +424,67 @@
       <div class="modal__wrapper">
         <button class="image-link image-link__close modal__close"></button>
         <h2 class="title modal__title">Обратная связь</h2>
-        <input
-          type="text"
-          name="name"
-          class="input modal__input"
-          placeholder="Имя"
-        />
-        <input
-          type="tel"
-          name="phone"
-          class="input modal__input"
-          placeholder="Телефон"
-        />
-        <input
-          type="email"
-          name="email"
-          class="input modal__input"
-          placeholder="Электронная почта"
-        />
-        <textarea
-          name="message"
-          placeholder="Сообщение"
-          сlass="input modal__input modal__textarea"
-        ></textarea>
-        <div class="modal__text">
-          Нажимая “отправить”, вы даете согласие на
-          <a href="#" class="modal__link">
-            обработку персональных данных
-          </a>
-          и соглашаетесь с нашей
-          <a href="#" class="modal__link">политикой конфиденциальности</a>
-        </div>
-        <button href="#" class="order-link modal__order-link">
-          <span class="order-link__text">отправить</span>
-        </button>
+        <form action="#">
+          <input
+            type="text"
+            name="name"
+            class="input modal__input"
+            placeholder="Имя"
+          />
+          <input
+            type="tel"
+            name="phone"
+            class="input modal__input"
+            placeholder="Телефон"
+          />
+          <input
+            type="email"
+            name="email"
+            class="input modal__input"
+            placeholder="Электронная почта"
+          />
+          <textarea
+            name="message"
+            placeholder="Сообщение"
+            сlass="input modal__input modal__textarea"
+          ></textarea>
+          <div class="modal__text">
+            Нажимая “отправить”, вы даете согласие на
+            <a href="#" class="modal__link">
+              обработку персональных данных
+            </a>
+            и соглашаетесь с нашей
+            <a href="#" class="modal__link">политикой конфиденциальности</a>
+          </div>
+          <button type="submit" class="order-link modal__order-link">
+            <span class="order-link__text">отправить</span>
+          </button>
+        </form>
       </div>
     </section>
     <section class="callback-modal modal hidden" id="callbackModal">
       <div class="modal__wrapper">
         <button class="image-link image-link__close modal__close"></button>
         <h2 class="title modal__title">Заказать звонок</h2>
-        <input
-          type="tel"
-          name="phone"
-          class="input modal__input"
-          placeholder="Телефон"
-        />
-        <div class="modal__text">
-          Нажимая “отправить”, вы даете согласие на
-          <a href="#" class="modal__link">
-            обработку персональных данных
-          </a>
-          и соглашаетесь с нашей
-          <a href="#" class="modal__link">политикой конфиденциальности</a>
-        </div>
-        <button href="#" class="order-link modal__order-link">
-          <span class="order-link__text">отправить</span>
-        </button>
+        <form action="#">
+          <input
+            type="tel"
+            name="phone"
+            class="input modal__input"
+            placeholder="Телефон"
+          />
+          <div class="modal__text">
+            Нажимая “отправить”, вы даете согласие на
+            <a href="#" class="modal__link">
+              обработку персональных данных
+            </a>
+            и соглашаетесь с нашей
+            <a href="#" class="modal__link">политикой конфиденциальности</a>
+          </div>
+          <button type="submit" class="order-link modal__order-link">
+            <span class="order-link__text">отправить</span>
+          </button>
+        </form>
       </div>
     </section>
   </body>

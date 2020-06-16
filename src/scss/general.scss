@@ -43,7 +43,7 @@ li {
   }
 }
 .body-wrapper {
-  max-width: 1120px;
+  max-width: 1366px;
   margin: 0 auto;
   @media all and (min-width: 1366px) {
     & {
@@ -74,7 +74,7 @@ li {
       margin-bottom: 32px;
     }
   }
-  @media all and (min-width: 1120px) {
+  @media all and (min-width: 1366px) {
     & {
       margin-bottom: 10px;
     }

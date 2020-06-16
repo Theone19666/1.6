@@ -1,5 +1,5 @@
 .modal {
-  z-index: 9;
+  z-index: 99999999999;
   position: fixed;
   width: 100%;
   background-color: white;
@@ -64,6 +64,11 @@
   }
   &__link {
     color: $pink;
+    &:active,
+    &:focus {
+      outline: none;
+      border: 1px solid $black;
+    }
   }
   &__order-link {
     position: absolute;

@@ -3,7 +3,7 @@
   height: 100vh;
   background-color: rgba($color: white, $alpha: 0.96);
   width: 100%;
-  z-index: 3;
+  z-index: 99;
   @media all and (min-width: 1366px) {
     & {
       position: static;
@@ -11,9 +11,6 @@
       box-shadow: none;
       width: 320px;
     }
-  }
-  &_hidden {
-    display: none;
   }
   &__wrapper {
     overflow: auto;
@@ -34,6 +31,7 @@
     @media all and (min-width: 1366px) {
       & {
         justify-content: start;
+        box-shadow: none;
       }
     }
   }

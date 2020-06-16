@@ -38,6 +38,12 @@ document.getElementById("close").addEventListener("click", () => {
   toggleMainNavVisibility();
 });
 
+document.querySelector(".main-nav").addEventListener("click", (event) => {
+  if (event.target.id === "mainNav") {
+    toggleMainNavVisibility();
+  }
+});
+
 document.querySelectorAll(".repair__more-button").forEach((item) => {
   item.addEventListener("click", (event) => {
     const repairButton = event.target.closest(".repair__more-button");
@@ -51,15 +57,35 @@ document.querySelectorAll(".repair__more-button").forEach((item) => {
 document.querySelectorAll(".modal__close").forEach((item) => {
   item.addEventListener("click", (event) => {
     event.target.closest(".modal").classList.add("hidden");
+    document.querySelector("body").classList.remove("body_not-scroll");
+  });
+});
+document.querySelectorAll(".modal").forEach((item) => {
+  item.addEventListener("click", (event) => {
+    if (event.target.id === "feedbackModal") {
+      event.target.closest(".modal").classList.add("hidden");
+      document.querySelector("body").classList.remove("body_not-scroll");
+    }
   });
 });
 document.querySelectorAll(".image-link_chat").forEach((item) => {
   item.addEventListener("click", () => {
     document.getElementById("feedbackModal").classList.remove("hidden");
+    document.querySelector("body").classList.add("body_not-scroll");
   });
 });
 document.querySelectorAll(".image-link_phone").forEach((item) => {
   item.addEventListener("click", () => {
     document.getElementById("callbackModal").classList.remove("hidden");
+    document.querySelector("body").classList.add("body_not-scroll");
   });
 });
+document
+  .getElementById("readMoreDescriptionButton")
+  .addEventListener("click", () => {
+    document
+      .querySelectorAll(".description__text:nth-child(n+2)")
+      .forEach((item) => {
+        item.classList.remove("hidden");
+      });
+  });

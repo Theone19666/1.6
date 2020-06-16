@@ -24,4 +24,9 @@
   &::placeholder {
     color: $swiper-bullet-active;
   }
+  &:focus,
+  &:active {
+    outline: none;
+    border: 1px solid $black;
+  }
 }
