@@ -24,6 +24,8 @@
       position: 0 100px;
       color: white;
     }
+    transform: translate(100%);
+    transition: transform 300ms;
     @media all and (min-width: 768px) {
       & {
         width: 420px;
@@ -31,6 +33,7 @@
           -2px 0px 4px rgba(69, 79, 126, 0.02);
         padding: 40px 32px;
         background-position: 0 36px;
+        transform: translate(500px);
       }
     }
   }

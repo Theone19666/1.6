@@ -1,33 +1,63 @@
 const moreButtonHideSelector = "more-button_hide";
+const bodyNotScrollSelector = "body_not-scroll";
+const mainNavWrapperSelector = ".main-nav__wrapper";
 
-function toggleMainNavVisibility() {
-  const mainNav = document.getElementById("mainNav");
-  const body = document.querySelector(".body");
-  if (mainNav && mainNav.classList.contains("hidden")) {
-    mainNav.classList.remove("hidden");
-    body.classList.add("body_not-scroll");
+function toggleShowButtonAndBrands({ show = true, repairButton = {} } = {}) {
+  repairButton.classList.toggle(moreButtonHideSelector);
+  repairButton.previousElementSibling
+    .querySelector(".repair-wrapper")
+    .classList.toggle("wrapper-show-all");
+  if (show) {
+    repairButton.textContent = "Показать всё";
   } else {
-    mainNav.classList.add("hidden");
-    body.classList.remove("body_not-scroll");
+    repairButton.textContent = "Скрыть";
   }
 }
 
-function toggleShowButtonAndBrands({ show = true, repairButton = {} } = {}) {
-  if (show) {
-    repairButton.textContent = "Показать всё";
-    repairButton.classList.remove(moreButtonHideSelector);
-    // document.querySelector(".brands").classList.remove("brands_show-all-brand");
-    repairButton.previousElementSibling
-      .querySelector(".repair-wrapper")
-      .classList.remove("wrapper-show-all");
+function toggleMainNavVisibility() {
+  const mainNav = document.getElementById("mainNav");
+  if (mainNav.classList.contains("hidden")) {
+    document.getElementById("mainNav").classList.toggle("hidden");
+    document.querySelector(".body").classList.toggle(bodyNotScrollSelector);
+    setTimeout(() => {
+      mainNav.querySelector(mainNavWrapperSelector).style.transform =
+        "translate(0)";
+    }, 300);
   } else {
-    repairButton.textContent = "Скрыть";
-    repairButton.classList.add(moreButtonHideSelector);
-    //document.querySelector(".brands").classList.add("brands_show-all-brand");
-    repairButton.previousElementSibling
-      .querySelector(".repair-wrapper")
-      .classList.add("wrapper-show-all");
+    if (window.innerWidth < 768) {
+      mainNav.querySelector(mainNavWrapperSelector).style.transform =
+        "translate(-100%)";
+    } else {
+      mainNav.querySelector(mainNavWrapperSelector).style.transform =
+        "translate(-320px)";
+    }
+
+    setTimeout(() => {
+      document.getElementById("mainNav").classList.toggle("hidden");
+      document.querySelector(".body").classList.toggle(bodyNotScrollSelector);
+    }, 300);
   }
+}
+
+function toggleModalVisibility(modal = {}) {
+  const modalWrapper = modal.querySelector(".modal__wrapper");
+  if (modal.classList.contains("hidden")) {
+    modal.classList.toggle("hidden");
+    setTimeout(() => {
+      modalWrapper.style.transform = "translate(0)";
+    }, 300);
+  } else {
+    if (window.innerWidth < 768) {
+      modalWrapper.style.transform = "translate(100%)";
+    } else {
+      modalWrapper.style.transform = "translate(500px)";
+    }
+
+    setTimeout(() => {
+      modal.classList.toggle("hidden");
+    }, 300);
+  }
+  document.querySelector("body").classList.toggle(bodyNotScrollSelector);
 }
 
 document.getElementById("burgerButton").addEventListener("click", () => {
@@ -54,38 +84,46 @@ document.querySelectorAll(".repair__more-button").forEach((item) => {
     }
   });
 });
+
 document.querySelectorAll(".modal__close").forEach((item) => {
   item.addEventListener("click", (event) => {
-    event.target.closest(".modal").classList.add("hidden");
-    document.querySelector("body").classList.remove("body_not-scroll");
+    toggleModalVisibility(event.target.closest(".modal"));
   });
 });
+
 document.querySelectorAll(".modal").forEach((item) => {
   item.addEventListener("click", (event) => {
-    if (event.target.id === "feedbackModal") {
-      event.target.closest(".modal").classList.add("hidden");
-      document.querySelector("body").classList.remove("body_not-scroll");
+    if (
+      event.target.id === "feedbackModal" ||
+      event.target.id === "callbackModal"
+    ) {
+      toggleModalVisibility(event.target.closest(".modal"));
     }
   });
 });
 document.querySelectorAll(".image-link_chat").forEach((item) => {
   item.addEventListener("click", () => {
-    document.getElementById("feedbackModal").classList.remove("hidden");
-    document.querySelector("body").classList.add("body_not-scroll");
+    toggleModalVisibility(document.getElementById("feedbackModal"));
   });
 });
 document.querySelectorAll(".image-link_phone").forEach((item) => {
   item.addEventListener("click", () => {
-    document.getElementById("callbackModal").classList.remove("hidden");
-    document.querySelector("body").classList.add("body_not-scroll");
+    toggleModalVisibility(document.getElementById("callbackModal"));
   });
 });
 document
   .getElementById("readMoreDescriptionButton")
   .addEventListener("click", () => {
     document
-      .querySelectorAll(".description__text:nth-child(n+2)")
+      .querySelectorAll(".description__text:nth-of-type(n+3)")
       .forEach((item) => {
-        item.classList.remove("hidden");
+        item.classList.toggle("hidden");
       });
+    const moreButton = document.getElementById("readMoreDescriptionButton");
+    moreButton.classList.toggle(moreButtonHideSelector);
+    if (moreButton.textContent === "Читать далее") {
+      moreButton.textContent = "Скрыть";
+    } else {
+      moreButton.textContent = "Читать далее";
+    }
   });
